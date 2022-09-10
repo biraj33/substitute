@@ -1,0 +1,28 @@
+<%- include("partials/header") -%>
+<div class="landPage">
+
+<h1>Remove the present reacher from the list</h1>
+<br>
+
+<% absentTeacher.forEach(function(name){%>
+<form action="/delete" method="post">
+
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" name="checkbox" value="<%=name._id%>"  onchange="this.form.submit()" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+        <label class="form-check-label" for="flexSwitchCheckChecked"><%=name.absentTeacher%></label>
+      </div>
+</form>
+
+
+<%})%>
+
+<br><br>
+<a class="ps-3" href="/absent"><button type="button" class="btn but btn-outline-dark "> + </button></a>
+ <br>
+
+ 
+
+<a  class="ps-3" href="/list"><button type="button" class="btn but  btn-outline-dark "> <i class="fa-solid fa-table"></i> </button></a>
+</div>
+<%- include("partials/footer")-%>
+

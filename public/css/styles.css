@@ -1,0 +1,92 @@
+.landPage {
+   
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    min-height: 1000px;
+    
+  }
+
+
+
+.absTab,.thh,.tdd{
+    border: solid;
+}
+
+.abs{
+    background-color: red;
+}
+.pract{
+    background-color: green;
+}
+.hName{
+    padding: 3rem;
+    border: solid;
+}
+.infoTime td{
+    border: solid;
+} 
+
+.card-img-top{
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+}
+.card{
+    width:300px;
+    
+
+}
+.mainPaget {
+    text-align: center;
+}
+.td{
+    padding-left: 45px;
+}
+
+.but {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 40%;
+    border-color: transparent;
+    background-color: #A683E3;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 6px;
+    border-width: 0;
+  }
+
+.ref{
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    
+}
+.hom{
+    position: fixed;
+    top: 2rem;
+    right: 6rem;
+}
+.butRef{
+        min-height: 50px;
+        width: 50px;
+        border-radius: 40%;
+        border-color: transparent;
+       
+        color: rgb(194, 194, 194);
+        font-size: 30px;
+        padding-bottom: 6px;
+        border-width: 0;   
+}
+.spect{
+    position: fixed;
+    top: 5rem;
+    right: 3rem;
+}
+.add{
+    position: fixed;
+    top: 5rem;
+    right: 6rem; 
+}
+
+.fu{
+    color: yellowgreen;
+}

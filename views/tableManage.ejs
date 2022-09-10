@@ -1,0 +1,616 @@
+<%- include("partials/header") -%>
+
+<table class="absTab">
+
+    <%var h = teacher.h.sun ; %>
+
+    <tr class="infoTime">
+        <td><%=timeRange[0]%></td>
+        <td> <%=timeRange[1]%></td>
+        <td>10:55-11:40</td>
+        <td>11:40-12:25</td>
+        <td>12:25-1:10</td>
+        <td>1:10-1:35</td>
+        <td>1:35-2:20</td>
+        <td>2:20-3:05</td>
+        <td>3:05-3:50</td>
+        <td>3:50-4:35</td>
+        <td>4:35-5:20</td>
+        
+    </tr>
+                    <!-- section a -->
+
+    <tr>
+        <td class="hName"  rowspan="13">A</td>
+    </tr>
+
+
+    
+    
+    <%for(let z = 0; z < 6; z++){%>
+
+
+ <tr class="thh" ></tr>
+<% var xz %>
+
+ <% switch (z) {
+    case 0 : %>
+        <%h = asun%> 
+        <% break;
+    
+    case 1 : %>
+        <%h = amon%> 
+            <% break;
+    
+     case 2 : %>
+        <%h = atue%> 
+            <% break;
+
+     case 3 : %>
+        <%h = awed%> 
+            <% break;
+
+     case 4 : %>
+        <%h = athu%> 
+            <% break;
+
+     case 5 : %>
+        <%h = afri%> 
+            <% break;
+    
+    
+    } %>
+
+
+   
+
+
+    
+
+            
+    <%h.forEach(function(list){%>
+
+            <%if(absentTeacher.includes(list)){%>
+                       
+                <td class="tdd  ">
+                    
+                    
+                    
+                
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <%= list%>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/CHEM.NH">CHEM.NH</a></li>
+                          <li><a class="dropdown-item" href="/NEP.DR">NEP.DR</a></li>
+                          <li><a class="dropdown-item" href="/ENG.GT">ENG.GT</a></li>
+                        </ul>
+                      </div>
+                
+                
+                </td> 
+
+            <%}else if ( list === "PRACTICAL" ){%>
+                <td class="tdd pract"> <%=list%></td>      
+            <%} else { %>
+                <td class="tdd"> <%=list%></td> 
+            <% } %> 
+    <%})%>
+
+    
+        
+        
+    
+</tr>
+
+
+    <%}%>
+
+
+    <!-- section b -->
+
+
+    <tr>
+        <td class="hName"  rowspan="13">B</td>
+    </tr>
+
+
+    
+    
+    <%for(let z = 0; z < 6; z++){%>
+
+        <tr class="thh" ></tr>
+       <% var xz %>
+       
+        <% switch (z) {
+           case 0 : %>
+               <%h = bsun%> 
+               <% break;
+           
+           case 1 : %>
+               <%h = bmon%> 
+                   <% break;
+           
+            case 2 : %>
+               <%h = btue%> 
+                   <% break;
+       
+            case 3 : %>
+               <%h = bwed%> 
+                   <% break;
+       
+            case 4 : %>
+               <%h = bthu%> 
+                   <% break;
+       
+            case 5 : %>
+               <%h = bfri%> 
+                   <% break;
+           
+           
+           } %>
+       
+       
+          
+                          
+           <%h.forEach(function(list){%>
+       
+                   <%if(absentTeacher.includes(list)){%>
+                       
+                    <td class="tdd  ">
+                    
+                    
+                    
+                
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <%= list%>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/CHEM.NH">CHEM.NH</a></li>
+                              <li><a class="dropdown-item" href="/NEP.DR">NEP.DR</a></li>
+                              <li><a class="dropdown-item" href="/ENG.GT">ENG.GT</a></li>
+                            </ul>
+                          </div>
+                    
+                    
+                    </td> 
+                            
+                       <%}else if ( list === "PRACTICAL" ){%>
+                           <td class="tdd pract"> <%=list%></td>      
+                       <%} else { %>
+                        <td class="tdd"> <%=list%></td> 
+                      <% } %>   
+           <%})%>
+             
+               
+           
+       </tr>
+       
+       
+           <%}%>
+
+
+
+
+    <!-- section c -->
+
+
+    <tr>
+        <td class="hName"  rowspan="13">C</td>
+    </tr>
+
+
+    
+    
+    <%for(let z = 0; z < 6; z++){%>
+
+        <tr class="thh" ></tr>
+       <% var xz %>
+       
+        <% switch (z) {
+           case 0 : %>
+               <%h = csun%> 
+               <% break;
+           
+           case 1 : %>
+               <%h = cmon%> 
+                   <% break;
+           
+            case 2 : %>
+               <%h = ctue%> 
+                   <% break;
+       
+            case 3 : %>
+               <%h = cwed%> 
+                   <% break;
+       
+            case 4 : %>
+               <%h = cthu%> 
+                   <% break;
+       
+            case 5 : %>
+               <%h = cfri%> 
+                   <% break;
+           
+           
+           } %>
+       
+       
+          
+                          
+           <%h.forEach(function(list){%>
+       
+                   <%if(absentTeacher.includes(list)){%>
+                       
+                    <td class="tdd  ">
+                    
+                    
+                    
+                
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <%= list%>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/CHEM.NH">CHEM.NH</a></li>
+                              <li><a class="dropdown-item" href="/NEP.DR">NEP.DR</a></li>
+                              <li><a class="dropdown-item" href="/ENG.GT">ENG.GT</a></li>
+                            </ul>
+                          </div>
+                    
+                    
+                    </td> 
+                            
+                       <%}else if ( list === "PRACTICAL" ){%>
+                           <td class="tdd pract"> <%=list%></td>      
+                       <%} else { %>
+                        <td class="tdd"> <%=list%></td> 
+                      <% } %>   
+           <%})%>
+             
+               
+           
+       </tr>
+       
+       
+           <%}%>
+
+
+    <!-- section D -->
+
+
+    <tr>
+        <td class="hName"  rowspan="13">D</td>
+    </tr>
+
+
+    
+    
+    <%for(let z = 0; z < 6; z++){%>
+
+        <tr class="thh" ></tr>
+       <% var xz %>
+       
+        <% switch (z) {
+           case 0 : %>
+               <%h = dsun%> 
+               <% break;
+           
+           case 1 : %>
+               <%h = dmon%> 
+                   <% break;
+           
+            case 2 : %>
+               <%h = dtue%> 
+                   <% break;
+       
+            case 3 : %>
+               <%h = dwed%> 
+                   <% break;
+       
+            case 4 : %>
+               <%h = dthu%> 
+                   <% break;
+       
+            case 5 : %>
+               <%h = dfri%> 
+                   <% break;
+           
+           
+           } %>
+       
+       
+          
+                          
+           <%h.forEach(function(list){%>
+       
+                   <%if(absentTeacher.includes(list)){%>
+                       
+                    <td class="tdd  ">
+                    
+                    
+                    
+                
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <%= list%>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/CHEM.NH">CHEM.NH</a></li>
+                              <li><a class="dropdown-item" href="/NEP.DR">NEP.DR</a></li>
+                              <li><a class="dropdown-item" href="/ENG.GT">ENG.GT</a></li>
+                            </ul>
+                          </div>
+                    
+                    
+                    </td> 
+                            
+                       <%}else if ( list === "PRACTICAL" ){%>
+                           <td class="tdd pract"> <%=list%></td>      
+                       <%} else { %>
+                        <td class="tdd"> <%=list%></td> 
+                      <% } %>   
+           <%})%>
+             
+               
+           
+       </tr>
+       
+       
+           <%}%>
+
+            <!-- section F -->
+
+
+    <tr>
+        <td class="hName"  rowspan="13">F</td>
+    </tr>
+
+
+    
+    
+    <%for(let z = 0; z < 6; z++){%>
+
+        <tr class="thh" ></tr>
+       <% var xz %>
+       
+        <% switch (z) {
+           case 0 : %>
+               <%h = fsun%> 
+               <% break;
+           
+           case 1 : %>
+               <%h = fmon%> 
+                   <% break;
+           
+            case 2 : %>
+               <%h = ftue%> 
+                   <% break;
+       
+            case 3 : %>
+               <%h = fwed%> 
+                   <% break;
+       
+            case 4 : %>
+               <%h = fthu%> 
+                   <% break;
+       
+            case 5 : %>
+               <%h = ffri%> 
+                   <% break;
+           
+           
+           } %>
+       
+       
+          
+                          
+           <%h.forEach(function(list){%>
+       
+                   <%if(absentTeacher.includes(list)){%>
+                       
+                    <td class="tdd  ">
+                    
+                    
+                    
+                
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <%= list%>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/CHEM.NH">CHEM.NH</a></li>
+                              <li><a class="dropdown-item" href="/NEP.DR">NEP.DR</a></li>
+                              <li><a class="dropdown-item" href="/ENG.GT">ENG.GT</a></li>
+                            </ul>
+                          </div>
+                    
+                    
+                    </td> 
+                            
+                       <%}else if ( list === "PRACTICAL" ){%>
+                           <td class="tdd pract"> <%=list%></td>      
+                       <%} else { %>
+                        <td class="tdd"> <%=list%></td> 
+                      <% } %>   
+           <%})%>
+             
+               
+           
+       </tr>
+       
+       
+           <%}%>
+
+
+    <!-- section G -->
+
+
+    <tr>
+        <td class="hName"  rowspan="13">G</td>
+    </tr>
+
+
+    
+    
+    <%for(let z = 0; z < 6; z++){%>
+
+        <tr class="thh" ></tr>
+       <% var xz %>
+       
+        <% switch (z) {
+           case 0 : %>
+               <%h = gsun%> 
+               <% break;
+           
+           case 1 : %>
+               <%h = gmon%> 
+                   <% break;
+           
+            case 2 : %>
+               <%h = gtue%> 
+                   <% break;
+       
+            case 3 : %>
+               <%h = gwed%> 
+                   <% break;
+       
+            case 4 : %>
+               <%h = gthu%> 
+                   <% break;
+       
+            case 5 : %>
+               <%h = gfri%> 
+                   <% break;
+           
+           
+           } %>
+       
+       
+          
+                          
+           <%h.forEach(function(list){%>
+       
+                   <%if(absentTeacher.includes(list)){%>
+                       
+                    <td class="tdd  ">
+                    
+                    
+                    
+                
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <%= list%>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/CHEM.NH">CHEM.NH</a></li>
+                              <li><a class="dropdown-item" href="/NEP.DR">NEP.DR</a></li>
+                              <li><a class="dropdown-item" href="/ENG.GT">ENG.GT</a></li>
+                            </ul>
+                          </div>
+                    
+                    
+                    </td> 
+                            
+                       <%}else if ( list === "PRACTICAL" ){%>
+                           <td class="tdd pract"> <%=list%></td>      
+                       <%} else { %>
+                        <td class="tdd"> <%=list%></td> 
+                      <% } %>   
+           <%})%>
+             
+               
+           
+       </tr>
+       
+       
+           <%}%>
+
+    <!-- section H -->
+
+
+    <tr>
+        <td class="hName"  rowspan="13">H</td>
+    </tr>
+
+
+    
+    
+    <%for(let z = 0; z < 6; z++){%>
+
+        <tr class="thh" ></tr>
+       <% var xz %>
+       
+        <% switch (z) {
+           case 0 : %>
+               <%h = hsun%> 
+               <% break;
+           
+           case 1 : %>
+               <%h = hmon%> 
+                   <% break;
+           
+            case 2 : %>
+               <%h = htue%> 
+                   <% break;
+       
+            case 3 : %>
+               <%h = hwed%> 
+                   <% break;
+       
+            case 4 : %>
+               <%h = hthu%> 
+                   <% break;
+       
+            case 5 : %>
+               <%h = hfri%> 
+                   <% break;
+           
+           
+           } %>
+       
+       
+          
+                          
+           <%h.forEach(function(list){%>
+       
+                   <%if(absentTeacher.includes(list)){%>
+                       
+                    <td class="tdd  ">
+                    
+                    
+                    
+                
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <%= list%>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="/CHEM.NH">CHEM.NH</a></li>
+                              <li><a class="dropdown-item" href="/NEP.DR">NEP.DR</a></li>
+                              <li><a class="dropdown-item" href="/ENG.GT">ENG.GT</a></li>
+                            </ul>
+                          </div>
+                    
+                    
+                    </td> 
+                            
+                       <%}else if ( list === "PRACTICAL" ){%>
+                           <td class="tdd pract"> <%=list%></td>      
+                       <%} else { %>
+                        <td class="tdd"> <%=list%></td> 
+                      <% } %>   
+           <%})%>
+             
+               
+           
+       </tr>
+       
+       
+           <%}%>
+       
+ 
+</table>
+<%- include("partials/footer")-%>

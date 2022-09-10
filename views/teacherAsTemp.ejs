@@ -1,0 +1,43 @@
+<%- include("partials/header") -%>
+
+
+<div class="landPage">
+<br><br><br><br><br>
+
+<div class="container">
+<div class="row">
+    
+
+
+
+    <div class=" intcard   col-lg-4">
+        
+        
+        <div class="card border-dark mb-3" >
+            <img src="<%= teacher.image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= teacher.fullname %></h5>
+              
+            </div>
+            <ul class="list-group text-dark list-group-flush">
+              <li class="list-group-item">Short name : <%= teacher.name %></li>
+              <li class="list-group-item">Contact no : <%= teacher.phone%></li>
+              <li class="list-group-item">subject : <%= teacher.subject%></li>
+            </ul>
+            
+          </div>
+    </div>
+
+   
+</div>
+</div>
+
+<br>
+
+
+
+
+
+
+</div>
+<%- include("partials/footer")-%>

@@ -1,0 +1,474 @@
+<%- include("partials/header") -%>
+<div class="landPage">
+
+    <%let i = 1; %>
+<h1>Please select the absent teacher</h1>
+
+<br>
+
+
+<table class="absTab chem">
+
+    
+    <%i = 0; %>
+<!--  -->
+
+<h3>Chemistry teacher</h3>
+
+<%teacherNameChem.forEach( function(teacher){%>
+   
+    
+    
+
+    <%if(i % 3 === 0){%>
+        
+        <tr class="thh">
+            <td class="tdd tddChem"> <div class="form-check form-switch">
+
+                <%if(absentTeacher.includes(teacher.name)){%>
+                    <form action="/deleteCh" method="post">
+                        
+                        <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+    
+                    <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                    </form>
+                      
+                <% } else { %>
+    
+                    <form action="/absent" method="post">
+                    <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+                </form>
+                <% } %> 
+    
+    
+                
+              </div></td>
+            
+    <%}else{%>
+    
+        <td class="tdd tddChem"> <div class="form-check form-switch">
+
+            <%if(absentTeacher.includes(teacher.name)){%>
+                <form action="/deleteCh" method="post">
+                    
+                    <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+
+                <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                </form>
+                  
+            <% } else { %>
+
+                <form action="/absent" method="post">
+                <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+            </form>
+            <% } %> 
+
+
+            
+          </div></td>
+        
+    <%}%>
+
+    <%i++%>
+    
+<%});%>
+        </form>
+</table>
+
+<h3>Physics teacher</h3>
+<table class="absTab phy">
+    <%i = 0; %>
+<%teacherNamePhy.forEach( function(teacher){%>
+   
+    
+    
+    <%if(i % 3 === 0){%>
+
+        
+        <tr class="thh">
+
+            <td class="tdd tddChem"> <div class="form-check form-switch">
+
+                <%if(absentTeacher.includes(teacher.name)){%>
+                    <form action="/deleteCh" method="post">
+                        
+                        <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+    
+                    <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                    </form>
+                      
+                <% } else { %>
+    
+                    <form action="/absent" method="post">
+                    <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+                </form>
+                <% } %> 
+    
+    
+                
+              </div></td>
+
+
+
+    <%}else{%>
+    
+        <td class="tdd tddChem"> <div class="form-check form-switch">
+
+            <%if(absentTeacher.includes(teacher.name)){%>
+                <form action="/deleteCh" method="post">
+                    
+                    <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+
+                <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                </form>
+                  
+            <% } else { %>
+
+                <form action="/absent" method="post">
+                <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+            </form>
+            <% } %> 
+
+
+            
+          </div></td>
+        
+    <%}%>
+
+    <%i++%>
+    
+<%});%>
+
+        </table>
+
+
+<h3>Math teacher</h3>
+<table class="absTab math">
+    <%i = 1; %>
+<%teacherNameMat.forEach( function(teacher){%>
+   
+    
+    
+    <%if(i % 4 === 0){%>
+        
+        <tr class="thh">
+            <td class="tdd tddChem"> <div class="form-check form-switch">
+
+                <%if(absentTeacher.includes(teacher.name)){%>
+                    <form action="/deleteCh" method="post">
+                        
+                        <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+    
+                    <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                    </form>
+                      
+                <% } else { %>
+    
+                    <form action="/absent" method="post">
+                    <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+                </form>
+                <% } %> 
+    
+    
+                
+              </div></td>    
+
+    <%}else{%>
+    
+        <td class="tdd tddChem"> <div class="form-check form-switch">
+
+            <%if(absentTeacher.includes(teacher.name)){%>
+                <form action="/deleteCh" method="post">
+                    
+                    <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+
+                <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                </form>
+                  
+            <% } else { %>
+
+                <form action="/absent" method="post">
+                <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+            </form>
+            <% } %> 
+
+
+            
+          </div></td>
+        
+    <%}%>
+
+
+    <%i++%>
+    
+<%});%>
+
+        </table>
+
+
+        <h3>Computer teacher</h3>
+<table class="absTab com">
+    <%i = 0; %>
+<%teacherNameCom.forEach( function(teacher){%>
+   
+    
+    
+
+    <%if(i % 3 === 0){%>
+        
+        <tr class="thh">
+            <td class="tdd tddChem"> <div class="form-check form-switch">
+
+                <%if(absentTeacher.includes(teacher.name)){%>
+                    <form action="/deleteCh" method="post">
+                        
+                        <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+    
+                    <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                    </form>
+                      
+                <% } else { %>
+    
+                    <form action="/absent" method="post">
+                    <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+                </form>
+                <% } %> 
+    
+    
+                
+              </div></td>
+    <%}else{%>
+    
+        <td class="tdd tddChem"> <div class="form-check form-switch">
+
+            <%if(absentTeacher.includes(teacher.name)){%>
+                <form action="/deleteCh" method="post">
+                    
+                    <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+
+                <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                </form>
+                  
+            <% } else { %>
+
+                <form action="/absent" method="post">
+                <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+            </form>
+            <% } %> 
+
+
+            
+          </div></td>
+        
+    <%}%>
+
+
+    <%i++%>
+    
+<%});%>
+
+        </table>
+
+        <h3>Biology teacher</h3>
+<table class="absTab bio">
+    <%i = 1; %>
+<%teacherNameBio.forEach( function(teacher){%>
+   
+    
+    
+
+    <%if(i % 4 === 0){%>
+        
+        <tr class="thh">
+    <%}else{%>
+    
+        <td class="tdd tddChem"> <div class="form-check form-switch">
+
+            <%if(absentTeacher.includes(teacher.name)){%>
+                <form action="/deleteCh" method="post">
+                    
+                    <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+
+                <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                </form>
+                  
+            <% } else { %>
+
+                <form action="/absent" method="post">
+                <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+            </form>
+            <% } %> 
+
+
+            
+          </div></td>
+        
+    <%}%>
+
+
+    <%i++%>
+    
+<%});%>
+
+        </table>
+
+        <h3>English teacher</h3>
+<table class="absTab eng">
+    <%i = 0; %>
+<%teacherNameEng.forEach( function(teacher){%>
+   
+    
+    
+
+    <%if(i % 3 === 0){%>
+        
+        <tr class="thh">
+
+            <td class="tdd tddChem"> <div class="form-check form-switch">
+
+                <%if(absentTeacher.includes(teacher.name)){%>
+                    <form action="/deleteCh" method="post">
+                        
+                        <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+    
+                    <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                    </form>
+                      
+                <% } else { %>
+    
+                    <form action="/absent" method="post">
+                    <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+                </form>
+                <% } %> 
+    
+    
+                
+              </div></td>
+         
+
+    <%}else{%>
+    
+        <td class="tdd tddChem"> <div class="form-check form-switch">
+
+            <%if(absentTeacher.includes(teacher.name)){%>
+                <form action="/deleteCh" method="post">
+                    
+                    <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+
+                <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                </form>
+                  
+            <% } else { %>
+
+                <form action="/absent" method="post">
+                <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+            </form>
+            <% } %> 
+
+
+            
+          </div></td>
+        
+    <%}%>
+
+    <%i++%>
+    
+<%});%>
+
+        </table>
+
+            <h3>Nepali teacher</h3>
+<table class="absTab nep">
+    <%i = 0; %>
+<%teacherNameNep.forEach( function(teacher){%>
+   
+    
+    
+
+    <%if(i % 3 === 0){%>
+        
+        <tr class="thh">
+            <td class="tdd tddChem"> <div class="form-check form-switch">
+
+                <%if(absentTeacher.includes(teacher.name)){%>
+                    <form action="/deleteCh" method="post">
+                        
+                        <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+    
+                    <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                    </form>
+                      
+                <% } else { %>
+    
+                    <form action="/absent" method="post">
+                    <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+                </form>
+                <% } %> 
+    
+    
+                
+              </div></td>
+         
+
+    <%}else{%>
+    
+        <td class="tdd tddChem"> <div class="form-check form-switch">
+
+            <%if(absentTeacher.includes(teacher.name)){%>
+                <form action="/deleteCh" method="post">
+                    
+                    <input type="hidden" name="teacher" value="<%=teacher.name%>"> 
+
+                <input class="form-check-input"  type="checkbox"   role="switch" checked onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label> 
+                </form>
+                  
+            <% } else { %>
+
+                <form action="/absent" method="post">
+                <input class="form-check-input" name="teacher" type="checkbox" value="<%=teacher.name%>"  role="switch"  onchange="this.form.submit()" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault"><%=teacher.name%></label>
+            </form>
+            <% } %> 
+
+
+            
+          </div></td>
+        
+    <%}%>
+
+
+    <%i++%>
+    
+<%});%>
+
+        </table>
+
+
+
+</div>
+<%- include("partials/footer")-%>
