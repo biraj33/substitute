@@ -914,6 +914,6 @@ app.post("/routine", function(req,res){
     
 
 
-app.listen(3000 , function(){
-    console.log("port is started in 3000");
-})
+app.listen(process.env.PORT || 3000, function () {
+  console.log("server is started at port 3000");
+});
